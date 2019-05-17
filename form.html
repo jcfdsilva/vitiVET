@@ -4,6 +4,14 @@
     <script src="jquery-3.4.1.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="form.css">
+    <style>
+        #imageDon {
+            border-radius: 20px;
+            width: 400px !important;
+            margin-top: 0;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -15,14 +23,12 @@
 
     <div id="formulaire-content">
 
-        <!-- 1) image choice -->
-
         <div id="animalChoice">
             <h1> Votre animal est ...</h1>
 
             <div id="row">
                 <div class="poule">
-                    <input type="image" src="bruine-legkip.jpg" onClick="hydratationQuestion()" />
+                    <input type="image" src="poule-rousse-082903.jpg" onClick="hydratationQuestion()" />
                     <p>une poule</p>
                 </div>
 
@@ -72,6 +78,7 @@
                 <a>non</a>
             </div>
         </div>
+
         <div id="resultat1">
             <h1>Résultat</h1>
             <div id="row">
@@ -89,7 +96,7 @@
                 </ul>
                 <br />
 
-                <a href="VitiVet_telechargementDiagnostic.pdf" id="button">Télécharger ce diagnostic</a>
+                <a href="VitiVet_telechargementDiagnostic2.pdf" id="button">Télécharger ce diagnostic</a>
 
                 <br />
 
@@ -105,7 +112,7 @@
                     <li>Cabinet vétérinaire Lindén Sàrl, Sion, 027 323 82 82 (2km)</li>
                 </ul>
                 <br />
-
+                <a class="button" onclick="feedback()">Donnez-nous votre avis sur notre service !</a>
             </div>
         </div>
 
@@ -140,7 +147,37 @@
                     <li>- isoler-le des autres animaux</li>
                     <li>- placer-le dans un endroit frais et à l’abris du soleil</li>
                 </ul>
+
+                <a class="button" onclick="feedback()">Donnez-nous votre avis sur notre service !</a>
+
             </div>
+        </div>
+        <div id="feedback">
+            <h1>Donnez-nous votre avis afin d'améliorer la plateforme selon vos attentes !</h1>
+            <div id="row">
+                <p>Trouvez-vous le diagnostic satisfaisant? Si non, pourquoi ?</p>
+                <textarea name="diagnostic" rows="5" cols="80"></textarea>
+                <br><br>
+                <p>Trouvez-vous les questions compréhensibles? Si non, pourquoi ?</p>
+                <textarea name="questions" rows="5" cols="80"></textarea>
+                <br><br>
+
+                <p>Trouvez-vous les réponses suffisamment adéquates, si non pourquoi ?</p>
+                <textarea name="questions" rows="5" cols="80"></textarea>
+                <br><br>
+                <a class="button" onclick="dons()" id="button">Envoyer votre avis</a>
+
+            </div>
+        </div>
+
+        <div id="dons">
+            <h1>Souhaitez-vous contribuer à ce service en faisant un don?</h1>
+            <img src="paiementDon.png" onClick="remerciement()" id="imageDon" />
+        </div>
+
+        <div id="remerciement">
+            <h1>Merci de contribuer à notre plateforme!</h1>
+            <p>Vous allez être redirigé sur la page d'accueil...</p>
         </div>
 
     </div>
@@ -154,6 +191,11 @@
         $("#resultat").hide();
         $("#resultat1").hide();
         $("#resultat2").hide();
+        $("#feedback").hide();
+        $("#dons").hide();
+        $("#remerciement").hide();
+
+
 
         function hydratationQuestion() {
             $("#animalChoice").fadeOut();
@@ -188,6 +230,26 @@
         function resultat2() {
             $("#plumes").fadeOut();
             $("#resultat2").delay(800).fadeIn();
+        }
+
+        function feedback() {
+            $("#resultat1").fadeOut();
+            $("#resultat2").fadeOut();
+            $("#feedback").delay(800).fadeIn();
+        }
+
+        function dons() {
+            $("#feedback").fadeOut();
+            $("#dons").delay(800).fadeIn();
+        }
+
+        function remerciement() {
+            $("#dons").fadeOut();
+            $("#remerciement").delay(800).fadeIn();
+
+            setTimeout(function() {
+                window.location.href = "/index.html";
+            }, 5000);
         }
 
     </script>
