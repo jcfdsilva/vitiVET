@@ -27,7 +27,7 @@ p{
     margin-bottom:7vh;
     font-size:2.5vw;
 }
-#button{
+#button, .button{
     background-color:#649aa0;
     padding:6px 12px;
     border-radius:10px;
@@ -37,7 +37,7 @@ p{
     p {
         font-size: 27px;
     }
-    #button{
+    #button, .button{
         font-size:27px;
     }
 }
