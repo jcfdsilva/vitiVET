@@ -1,12 +1,25 @@
 <html>
 
 <head>
+    <script src="jquery-3.4.1.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-        #animalChoice img {
-            width: 200px;
-            height: auto;
+        .poule {
+            width: 45%;
+            height: 200px;
+            float: left;
+        }
 
+        .chevre {
+            width: 45%;
+            height: 200px;
+            float: right;
+        }
+
+        input {
+            margin: auto;
+            max-width: 80%;
+            height: auto;
         }
 
         #animalChoice {
@@ -20,21 +33,9 @@
         }
 
         #row {
+            width: 80%;
             display: inline-block;
-        }
-
-        .poule {
-            background-color: beige;
-            width: 45%;
-            height: 200px;
-            float: left;
-        }
-
-        .chevre {
-            background-color: skyblue;
-
-            margin-left: 15%;
-            height: 200px;
+            margin: auto;
         }
 
     </style>
@@ -45,25 +46,141 @@
         <a href="partenaires.html">Partenaires</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <h1> Votre animal est ...</h1>
+
     <div id="formulaire-content">
 
         <!-- 1) image choice -->
+
         <div id="animalChoice">
+            <h1> Votre animal est ...</h1>
+
             <div id="row">
                 <div class="poule">
-                    <img src="bruine-legkip.jpg" alt="poule">
+                    <input type="image" src="bruine-legkip.jpg" onClick="hydratationQuestion()" />
                     <p>une poule</p>
                 </div>
 
                 <div class="chevre">
-                    <img src="chevre-1-074448.jpg" alt="chèvre">
+                    <input type="image" src="chevre-1-074448.jpg" onClick="hydratationQuestion()" />
                     <p>une chèvre</p>
                 </div>
             </div>
         </div>
 
+        <div id="hydratation">
+            <h1>Votre animal s'hydrate normalement?</h1>
+            <div id="row">
+                <a onClick="alimentationQuestion()">oui</a>
+                <a onClick="alimentationQuestion()">non</a>
+            </div>
+        </div>
+        <div id="alimentation">
+            <h1>Votre animal s'alimente...</h1>
+            <div id="row">
+                <p onClick="respirationQuestion()">normalement </p>
+                <p onClick="respirationQuestion()">beaucoup</p>
+                <p onClick="respirationQuestion()">peu</p>
+                <p onClick="respirationQuestion()">pas du tout</p>
+            </div>
+        </div>
+        <div id="respiration">
+            <h1>Comment respire-t-il?</h1>
+            <div id="row">
+                <p>normalement</p>
+                <p onClick="becQuestion()">rapidement</p>
+                <p onClick="plumesQuestion()">avec difficulté</p>
+                <p>bruyament</p>
+            </div>
+        </div>
+        <div id="bec">
+            <h1>Votre animal a-t-il le bec ouvert?</h1>
+            <div id="row">
+                <a onClick="resultat1()">oui</a>
+                <a onClick="resultat1()">non</a>
+            </div>
+        </div>
+        <div id="plumes">
+            <h1>Votre animal a-t-il les plumes hérissées?</h1>
+            <div id="row">
+                <a>oui</a>
+                <a>non</a>
+            </div>
+        </div>
+        <div id="resultat1">
+            <h1>Résultat</h1>
+            <div id="row">
+                <p>Rappel: ceci est un diagnostic estimatif</p>
+                <p> Il semble que votre poule aurait:</p>
+                <p>Un coup de chaud</p>
+                <h3>Voici quelques conceils</h3>
+                <ul>
+                    <li>...</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="resultat2">
+            <h1>Résultat</h1>
+            <div id="row">
+                <p>Rappel: ceci est un diagnostic estimatif</p>
+                <p> Il semble que votre poule aurait:</p>
+                <p>Peste Aviaire</p>
+                <h3>Voici une liste de vétérinaires près de vous</h3>
+                <ul>
+                    <li>...</li>
+                </ul>
+                <h3>Voici quelques conceils à faire tout de suite</h3>
+                <ul>
+                    <li>...</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
+
+    <script>
+        $("#hydratation").hide();
+        $("#alimentation").hide();
+        $("#respiration").hide();
+        $("#bec").hide();
+        $("#resultat").hide();
+
+        function hydratationQuestion() {
+            $("#animalChoice").fadeOut();
+            $("#hydratation").delay(800).fadeIn();
+        }
+
+        function alimentationQuestion() {
+            $("#hydratation").fadeOut();
+            $("#alimentation").delay(800).fadeIn();
+        }
+
+        function respirationQuestion() {
+            $("#alimentation").fadeOut();
+            $("#respiration").delay(800).fadeIn();
+        }
+
+        function becQuestion() {
+            $("#respiration").fadeOut();
+            $("#bec").delay(800).fadeIn();
+        }
+
+                function plumesQuestion() {
+            $("#respiration").fadeOut();
+            $("#plumes").delay(800).fadeIn();
+        }
+
+        function resultat1() {
+            $("#bec").fadeOut();
+            $("#resultat1").delay(800).fadeIn();
+        }
+
+                function resultat2() {
+            $("#plumes").fadeOut();
+            $("#resultat2").delay(800).fadeIn();
+        }
+
+    </script>
 </body>
 
 </html>
