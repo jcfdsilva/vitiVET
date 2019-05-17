@@ -142,8 +142,11 @@
         $("#hydratation").hide();
         $("#alimentation").hide();
         $("#respiration").hide();
+        $("#plumes").hide();
         $("#bec").hide();
         $("#resultat").hide();
+        $("#resultat1").hide();
+        $("#resultat2").hide();
 
         function hydratationQuestion() {
             $("#animalChoice").fadeOut();
@@ -165,7 +168,7 @@
             $("#bec").delay(800).fadeIn();
         }
 
-                function plumesQuestion() {
+        function plumesQuestion() {
             $("#respiration").fadeOut();
             $("#plumes").delay(800).fadeIn();
         }
@@ -175,7 +178,7 @@
             $("#resultat1").delay(800).fadeIn();
         }
 
-                function resultat2() {
+        function resultat2() {
             $("#plumes").fadeOut();
             $("#resultat2").delay(800).fadeIn();
         }
