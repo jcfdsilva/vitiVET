@@ -1,0 +1,33 @@
+.poule {
+            width: 45%;
+            height: 200px;
+            float: left;
+        }
+
+        .chevre {
+            width: 45%;
+            height: 200px;
+            float: right;
+        }
+
+        input {
+            margin: auto;
+            max-width: 80%;
+            height: auto;
+        }
+
+        #animalChoice {
+            display: inline-block;
+        }
+
+
+
+        h1 {
+            color: white;
+        }
+
+        #row {
+            width: 80%;
+            display: inline-block;
+            margin: auto;
+        }
