@@ -17,9 +17,9 @@
 <body>
     <nav>
         <div>
-            <a><img src="bullet.png">Information générale</a>
-            <a><img src="bullet.png">Symptomes</a>
-            <a><img src="bullet.png">Résultat</a>
+            <a><img id="1" src="bulletW.png">Information générale</a>
+            <a><img id="2" src="bullet.png">Symptomes</a>
+            <a><img id="3" src="bullet.png">Résultat</a>
         </div>
     </nav>
 
@@ -85,35 +85,37 @@
             <h1>Résultat</h1>
             <div id="row">
                 <p><em>Rappel: les résultats et conseils fournis par VitiVet ne remplacent pas une consultation médicale et ne constituent pas un diagnostic professionnel.</em></p>
-                <p> Il semble que votre poule ait:</p>
-                <p>Un coup de chaud</p>
+                <br/><br/>
+                <p><b> Il semble que votre poule ait:</b></p>
+                <h1 style="margin-top:0">Un coup de chaud</h1>
 
                 <p>Suivez nos conseils et votre poule sera de nouveau sur pattes pour chanter de plus belle!</p>
                 <br />
-                <p>Nos conseils : </p>
+                <p><b>Nos conseils : </b></p>
                 <ul>
                     <li>- placer-le dans un endroit frais et à l’abris du soleil</li>
                     <li>- hydrater beaucoup votre animal</li>
 
                 </ul>
-                <br />
+                <br/><br/>
 
-                <a href="VitiVet_telechargementDiagnostic2.pdf" id="button">Télécharger ce diagnostic</a>
+                <a href="VitiVet_telechargementDiagnostic2.pdf" target="_blank" id="button">Télécharger ce diagnostic</a>
 
-                <br />
+                <br/><br/><br/>
 
-                <p>Si vous voulez l'avis d'un spécialiste, voici les vétérinaires spécialisés pour votre animal</p>
+                <p><b>Si vous voulez l'avis d'un spécialiste, voici les vétérinaires spécialisés pour votre animal:</b></p>
                 <ul>
-                    <li>Jean Dupont, Sierre, 076 819 76 67 (2km)</li>
-                    <li>Cabinet Ferma, Martigny, 076 819 76 67 (30km)</li>
+                    <li onClick="mail()">Jean Dupont, Sierre, 076 819 76 67 (2km)</li>
+                    <li onClick="mail()">Cabinet Ferma, Martigny, 076 819 76 67 (30km)</li>
                 </ul>
+                <br/>
 
-                <p>D’autres vétérinaires disponibles en ce moment : </p>
+                <p><b>D’autres vétérinaires disponibles en ce moment : </b></p>
                 <ul>
-                    <li>Mobile Tierakupunktur Tierchiropraktik Schweiz, Murten, 076 819 76 67 (67km)</li>
-                    <li>Cabinet vétérinaire Lindén Sàrl, Sion, 027 323 82 82 (2km)</li>
+                    <li onClick="mail()">Mobile Tierakupunktur Tierchiropraktik Schweiz, Murten, 076 819 76 67 (67km)</li>
+                    <li onClick="mail()">Cabinet vétérinaire Lindén Sàrl, Sion, 027 323 82 82 (2km)</li>
                 </ul>
-                <br />
+                <br /><br/>
                 <a class="button" onclick="feedback()">Donnez-nous votre avis sur notre service !</a>
             </div>
         </div>
@@ -122,33 +124,37 @@
             <h1>Résultat</h1>
             <div id="row">
                 <p><em>Rappel: les résultats et conseils fournis par VitiVet ne remplacent pas une consultation médicale et ne constituent pas un diagnostic professionnel.</em></p>
-                <p> Il semble que votre poule ait :</p>
+                <br/>
+                <p><b>Il semble que votre poule ait :</b></p>
                 <p>la peste aviaire</p>
+                <br/>
                 <p>Nous vous conseillons de contacter un vétérinaire le plus rapidement possible. Vous pouvez télécharger le diagnostic Vitimet pour le donner lors du votre rendez-vous.</p>
-                <br />
+                <br /><br/>
 
-                <a href="VitiVet_telechargementDiagnostic.pdf" id="button">Télécharger ce diagnostic</a>
+                <a href="VitiVet_telechargementDiagnostic.pdf" target="_blank" id="button">Télécharger ce diagnostic</a>
 
-                <br />
+                <br /> <br/><br/>
 
-                <p>Voici une liste de vétérinaires spécialisé pour votre animal</p>
+                <p><b>Voici une liste de vétérinaires spécialisé pour votre animal</b></p>
                 <ul>
-                    <li>Jean Dupont, Sierre, 076 819 76 67 (2km)</li>
-                    <li>Cabinet Ferma, Martigny, 076 819 76 67 (30km)</li>
+                    <li onClick="mail()">Jean Dupont, Sierre, 076 819 76 67 (2km)</li>
+                    <li onClick="mail()">Cabinet Ferma, Martigny, 076 819 76 67 (30km)</li>
                 </ul>
+                <br/>
 
-                <p>D’autres vétérinaires disponibles en ce moment : </p>
+                <p><b>D’autres vétérinaires disponibles en ce moment : </b></p>
                 <ul>
-                    <li>Mobile Tierakupunktur Tierchiropraktik Schweiz, Murten, 076 819 76 67 (67km)</li>
-                    <li>Cabinet vétérinaire Lindén Sàrl, Sion, 027 323 82 82 (2km)</li>
+                    <li onClick="mail()">Mobile Tierakupunktur Tierchiropraktik Schweiz, Murten, 076 819 76 67 (67km)</li>
+                    <li onClick="mail()">Cabinet vétérinaire Lindén Sàrl, Sion, 027 323 82 82 (2km)</li>
                 </ul>
                 <br />
-                <p>Voici quelques conseils que vous pouvez déjà faire : </p>
+                <p><b>Voici quelques conseils que vous pouvez déjà faire : </b></p>
                 <ul>
                     <li>- hydrater votre animal</li>
                     <li>- isoler-le des autres animaux</li>
                     <li>- placer-le dans un endroit frais et à l’abris du soleil</li>
                 </ul>
+                <br/><br/>
 
                 <a class="button" onclick="feedback()">Donnez-nous votre avis sur notre service !</a>
 
@@ -156,20 +162,17 @@
         </div>
         <div id="feedback">
             <h1>Donnez-nous votre avis afin d'améliorer la plateforme selon vos attentes !</h1>
-            <div id="row">
                 <p>Trouvez-vous le diagnostic satisfaisant? Si non, pourquoi ?</p>
-                <textarea name="diagnostic" rows="5" cols="80"></textarea>
+                <textarea name="diagnostic" rows="3" cols="80"></textarea>
                 <br><br>
                 <p>Trouvez-vous les questions compréhensibles? Si non, pourquoi ?</p>
-                <textarea name="questions" rows="5" cols="80"></textarea>
+                <textarea name="questions" rows="3" cols="80"></textarea>
                 <br><br>
 
                 <p>Trouvez-vous les réponses suffisamment adéquates, si non pourquoi ?</p>
-                <textarea name="questions" rows="5" cols="80"></textarea>
+                <textarea name="questions" rows="3" cols="80"></textarea>
                 <br><br>
-                <a class="button" onclick="dons()" id="button">Envoyer votre avis</a>
-
-            </div>
+                <a class="button hover" onclick="dons()" id="button">Envoyer votre avis</a>
         </div>
 
         <div id="dons">
@@ -181,7 +184,27 @@
             <h1>Merci de contribuer à notre plateforme!</h1>
             <p>Vous allez être redirigé sur la page d'accueil...</p>
         </div>
+        <div id="mail">
+            <p>Prénom</p>
+            <input type="text" name="prénom">
+            <p>Nom</p>
+            <input type="text" name="prénom">
+            <p>Email</p>
+            <input type="text" name="email">
+            <br>
+            <br>
+            <a class="button" onclick="confirmationMail()">Contacter le vétérinaire</a>
 
+        </div>
+
+        <div id="confirmation">
+            <h1>Nous avons contacté le vétérinaire. Il vous contactera dans les plus brefs délais!</h1>
+            <a class="button" onclick="feedback()">Donnez-nous votre avis sur notre service !</a>
+            <br />
+            <br/>
+            <br/>
+            <a class="button" onclick="window.location.href = '/index.html'">Retour au site</a>
+        </div>
     </div>
 
     <script>
@@ -196,12 +219,16 @@
         $("#feedback").hide();
         $("#dons").hide();
         $("#remerciement").hide();
+        $("#mail").hide();
+        $("#confirmation").hide();
 
 
 
         function hydratationQuestion() {
             $("#animalChoice").fadeOut();
             $("#hydratation").delay(800).fadeIn();
+            document.getElementById("1").src="bullet.png";
+            document.getElementById("2").src="bulletW.png";
         }
 
         function alimentationQuestion() {
@@ -226,41 +253,60 @@
 
         function resultat1() {
             $("#bec").fadeOut();
+            document.getElementById("footer").style.position="relative";
             $("#resultat1").delay(800).fadeIn();
+            document.getElementById("2").src="bullet.png";
+            document.getElementById("3").src="bulletW.png";
+
         }
 
         function resultat2() {
             $("#plumes").fadeOut();
+            document.getElementById("footer").style.position="relative";
             $("#resultat2").delay(800).fadeIn();
+            document.getElementById("2").src="bullet.png";
+            document.getElementById("3").src="bulletW.png";
+
         }
 
         function feedback() {
             $("#resultat1").fadeOut();
+            document.getElementById("footer").style.position="absolute";
             $("#resultat2").fadeOut();
+            $("#confirmation").fadeOut();
             $("#feedback").delay(800).fadeIn();
         }
 
         function dons() {
             $("#feedback").fadeOut();
+            document.getElementById("footer").style.position="relative";
             $("#dons").delay(800).fadeIn();
         }
 
         function remerciement() {
             $("#dons").fadeOut();
+            document.getElementById("footer").style.position="absolute";
             $("#remerciement").delay(800).fadeIn();
 
             setTimeout(function() {
                 window.location.href = "/index.html";
             }, 5000);
         }
+        function mail() {
+            $("#resultat1").fadeOut();
+            $("#resultat2").fadeOut();
+            $("#mail").delay(800).fadeIn();
+        }
+
+        function confirmationMail() {
+            $("#mail").fadeOut();
+            $("#confirmation").delay(800).fadeIn();
+        }
 
     </script>
 </body>
-<footer>
-    pub
-    changer les etapes du form
-    mise en page des resultats
-    buttons
+<footer id="footer">
+    <img src="advert.png"/>
 </footer>
 
 </html>

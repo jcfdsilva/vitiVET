@@ -71,8 +71,10 @@ li{
 footer{
     width:100%;
     margin:0;
+    margin-top:100px;
     position:absolute;
     bottom:0;
+    margin-top:30px;
 }
 footer img{
     width:100%;
@@ -94,7 +96,7 @@ footer img{
 }
 #resultat1,#resultat2 {
     text-align: left;
-    width:70%;
+    width:80%;
     margin:0 auto;
 }
 #resultat1 h1,#resultat2 h1{
@@ -110,17 +112,19 @@ footer img{
     padding:5px;
     width:inherit;
     margin-left:0;
+    font-size:1em
 }
-#resultat1 p,#resultat2 p{
+#resultat1 p,#resultat2 p,#resultat1 li,#resultat2 li{
     background: rgba(0,0,0,0);
     color:white;
     width:100%;
     padding:0;
     margin:0;
+    font-size:1em;
 }
 #resultat1 ul,#resultat2 ul{
     margin:0;
 }
-footer{
-    display:none;
+.hover:hover{
+    cursor:pointer;
 }
